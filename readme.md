@@ -1,35 +1,23 @@
-## Install protobuf
+# Unary
+
+## install dependencies
 
 ```bash
-brew install protobuf
-go get google.golang.org/grpc
-go get github.com/golang/protobuf/protoc-gen-go
-
+go get ./...
 ```
 
-## Define the Protocol Buffers (protobuf) schema in a file named calculator.proto:
-
-```proto
-syntax = "proto3";
-
-package calculator;
-
-service Calculator {
-  rpc Add(AddRequest) returns (AddResponse);
-}
-
-message AddRequest {
-  int32 num1 = 1;
-  int32 num2 = 2;
-}
-
-message AddResponse {
-  int32 result = 1;
-}
-```
-
-## Generate Go code from the protobuf file
+## start server
 
 ```bash
-$ protoc --go_out=plugins=grpc:. calculator.proto
+make run-server
 ```
+
+## start client
+
+```bash
+make run-client
+```
+
+## diagram
+
+google with keyword "gRPC server client using unary"
