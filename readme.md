@@ -1,5 +1,9 @@
 # Unary
 
+## install generate proto file
+
+[gRPC](https://grpc.io/docs/languages/go/quickstart/)
+
 ## install dependencies
 
 ```bash
